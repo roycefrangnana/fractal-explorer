@@ -1,0 +1,57 @@
+/* Container spacing for buttons */
+.custom-button {
+    margin-bottom: 0.5rem;
+}
+
+/* Core button styling */
+div[data-testid="stButton"] > button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background-color: #3B82F6; /* Neutral dark shade */
+    color: white;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+div[data-testid="stButton"] > button:hover {
+    opacity: 0.5;
+    color: white;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+button:active {
+  background-color: blue ;
+}
+
+
+/* Apply to all st.download_button */
+div[data-testid="stDownloadButton"] > button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background-color: #22C55E; /* Green (Tailwind lime-500-ish) */
+    color: white;
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+
+/* Hover effect */
+div[data-testid="stDownloadButton"] > button:hover {
+    opacity: 0.5;
+    color: white;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* Clicked effect */
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: #16A34A; /* Darker green when clicked */
+}
