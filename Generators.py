@@ -78,9 +78,9 @@ def generate_triangle(depth,st_color,end_color,bg_color,thick):
                 cv.line(img, tuple(b.astype(int)), tuple(c.astype(int)), color, thick)
                 cv.line(img, tuple(c.astype(int)), tuple(a.astype(int)), color, thick)
                 r=random.randint(1,10)
-                if depth >8 and i<2:
+                if depth >8 and i<5:
                     continue
-                if i<depth-3 and r%9!=0:
+                if i<depth-2 and r%80!=0:
                     continue
                 frames.append(img.copy())
 
@@ -121,7 +121,7 @@ def generate_carpet(depth,st_color,end_color,bg_color,thick):
             if d == i:
                 cv.rectangle(img, (x, y), (x + s, y + s), color, thick)
                 r=random.randint(1,20)
-                if i<depth-2 and r%50!=0 and depth>3:
+                if i<depth-2 and r%100!=0 :
                     continue
                 frames.append(img.copy())
 
@@ -427,9 +427,9 @@ def gen_chaotriangle(iterations, st_color, end_color, bg_color,thickness):
             for j in range(3)
         ]
         cv.circle(img,c,thickness,color,-1)
-        if i<200 and i%5==0:
+        if i<200 and i%15==0:
             frames.append(img.copy())
-        if i%80==0:
+        elif i%180==0:
             frames.append(img.copy())
         pt = (x, y)
     frames.append(img)
@@ -457,9 +457,9 @@ def gen_chaocarp(iterations, st_color, end_color, bg_color, thickness):
             for j in range(3)
         ]
         cv.circle(img, c, thickness, color, -1)
-        if i < 200 and i % 5 == 0:
+        if i < 200 and i % 15 == 0:
             frames.append(img.copy())
-        if i % 80 == 0:
+        elif i % 150 == 0:
             frames.append(img.copy())
         pt = (x, y)
     frames.append(img)
@@ -484,9 +484,9 @@ def gen_frost(iterations, st_color, end_color, bg_color, thickness):
             for j in range(3)
         ]
         cv.circle(img, c, thickness, color, -1)
-        if i < 200 and i % 5 == 0:
+        if i < 200 and i % 15 == 0:
             frames.append(img.copy())
-        if i % 80 == 0:
+        elif i % 150 == 0:
             frames.append(img.copy())
         pt = (x, y)
     frames.append(img)
@@ -516,9 +516,9 @@ def gen_hexwing(iterations,st_color,end_color,bg_color,thickness):
             for j in range(3)
         ]
         cv.circle(img, cen, thickness, color, -1)
-        if i < 200 and i % 5 == 0:
+        if i < 200 and i % 15 == 0:
             frames.append(img.copy())
-        if i % 80 == 0:
+        elif i % 150 == 0:
             frames.append(img.copy())
     frames.append(img)
     return frames
@@ -555,9 +555,9 @@ def gen_hexflake(iterations, st_color, end_color, bg_color, thickness):
         cen=(int(x),int(y))
         cv.circle(img,cen,thickness,color,-1)
         last_idx = idx
-        if i < 200 and i % 5 == 0:
+        if i < 200 and i % 15 == 0:
             frames.append(img.copy())
-        if i % 80 == 0:
+        elif i % 150 == 0:
             frames.append(img.copy())
     frames.append(img)
     return frames
@@ -610,9 +610,9 @@ def gen_petal(iterations, st_color, end_color, bg_color, thickness,n_pet):
         cen=(int(x),int(y))
         cv.circle(img,cen,thickness,color,-1)
         last_idx = idx
-        if i < 200 and i % 5 == 0:
+        if i < 200 and i % 15 == 0:
             frames.append(img.copy())
-        if i % 80 == 0:
+        elif i % 150 == 0:
             frames.append(img.copy())
     frames.append(img)
     return frames
