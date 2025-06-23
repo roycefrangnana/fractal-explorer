@@ -121,7 +121,7 @@ def generate_carpet(depth,st_color,end_color,bg_color,thick):
             if d == i:
                 cv.rectangle(img, (x, y), (x + s, y + s), color, thick)
                 r=random.randint(1,20)
-                if i<depth-2 and r%19!=0:
+                if i<depth-2 and r%50!=0 and depth>3:
                     continue
                 frames.append(img.copy())
 
@@ -160,7 +160,7 @@ def generate_tree(depth, st_color,end_color, bg_color,turn):
                 r=random.randint(1,20)
                 if depth>8 and i<3:
                     continue
-                if i>depth-2 and r%19!=0:
+                if i>depth-3 and r%50!=0:
                     continue
                 frames.append(img.copy())
 
